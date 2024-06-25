@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kirbysmashyeet.simpletimerapplication.TimerController">
+   <children>
+      <TextField fx:id="timerDisplay" alignment="CENTER" disable="true" editable="false" focusTraversable="false" prefHeight="100.0" text="00:00:00">
+         <VBox.margin>
+            <Insets bottom="10.0" left="15.0" right="15.0" top="20.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Arial" size="48" />
+         </font>
+      </TextField>
+      <HBox alignment="TOP_CENTER" prefHeight="10.0" prefWidth="300.0" spacing="10.0">
+         <children>
+            <TextField fx:id="hourInput" alignment="CENTER" promptText="Hour" />
+            <TextField fx:id="minuteInput" alignment="CENTER" promptText="Minute" />
+            <TextField fx:id="secondInput" alignment="CENTER" layoutX="10.0" layoutY="10.0" promptText="Second" />
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </HBox>
+      <HBox alignment="TOP_CENTER" spacing="20.0">
+         <children>
+            <Button fx:id="setButton" onAction="#setTimer" mnemonicParsing="false" prefWidth="49.61546378035452" text="Set" textAlignment="CENTER" />
+            <Button fx:id="startAndStopButton" onAction="#startAndStopTimer" mnemonicParsing="false" text="Start" />
+            <Button fx:id="resetButton" onAction="#resetTimer" layoutX="64.0" layoutY="20.0" mnemonicParsing="false" text="Reset" />
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</VBox>
